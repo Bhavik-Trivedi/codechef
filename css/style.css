@@ -3,6 +3,12 @@ body {
 	margin: 0;
 }
 
+.demo-img {
+    position: absolute;
+    opacity: 0.10;
+    z-index: -1;
+}
+
 @media(min-width: 320px) {
     body {
         font-size: 12px;
@@ -34,13 +40,13 @@ body {
 }
 
 .my_container {
-	max-width: 62.750em;
+	max-width: 59.063em;
+	width: 100%;
 	margin: 0 auto;
 }
 
-.top-header,
 .header-menu {
-    padding: 1.563em 6.875em;
+    padding: 1.688em 6.688em 1.125em 6.875em;
 }
 
 .left-box,
@@ -54,6 +60,11 @@ body {
 	vertical-align: middle;
 }
 
+.header-menu-left,
+.header-menu-right {
+	vertical-align: bottom;
+}
+
 .header-menu-left a {
 	display: inline-block;
     color: #34404B;
@@ -63,6 +74,10 @@ body {
 .right-box,
 .header-menu-right {
 	text-align: right;
+}
+
+.header-menu-right {
+    margin-bottom: 0.500em;
 }
 
 .left-box a {
@@ -117,6 +132,7 @@ body {
 
 .top-header {
     border-bottom: 1px solid #F2F2F2;
+    padding: 0.938em 5.938em 0.938em 6.875em;
 }
 
 .logo-img-box,
@@ -151,6 +167,7 @@ body {
 
 .colored-circles {
     text-align: right;
+    max-height: 0.500em;
 }
 
 .colored-circle {
@@ -190,10 +207,14 @@ body {
     font-size: 1.000em;
     text-transform: capitalize;
     text-decoration: none;
-    margin: 0 1.188em;
+    margin: 0 1.031em;
     color: #34404B;
     transition: 0.5s ease;
     position: relative;
+}
+
+.header-menu-right a:last-child {
+    margin-right: 0;
 }
 
 .header-menu-right a:hover,
@@ -222,15 +243,17 @@ body {
 
 #section1 {
     background: url(../images/section1-banner.png);
-    padding: 9.063em 0 7.188em;
+    padding: 8.313em 0 7.188em;
     background-size: cover;
     background-position: bottom right;
+    margin-bottom: -2px;
 }
 
 .section1_title {
     font-size: 2.750em;
     color: #34404B;
     line-height: 53px;
+    font-weight: 500;
 }
 
 .section1_description {
@@ -238,7 +261,7 @@ body {
     line-height: 36px;
     letter-spacing: 0.3px;
     color: #34404B;
-    margin: 1.250em 0 2.708em;
+    margin: 0.625em 0 2.292em;
 }
 
 .enroll_btn a {
@@ -260,7 +283,7 @@ body {
 .dates-box {
     background: #2F2F2F;
     color: #ffffff;
-    padding: 1.250em 0;
+    padding: 1.000em 0;
 }
 
 .dates-title {
@@ -291,7 +314,7 @@ body {
 
 .certification-box {
     background: #F4F6F8;
-    padding: 2.500em 0 1.250em;
+    padding: 1.250em 0 1.250em;
 }
 
 .section-title {
@@ -305,33 +328,37 @@ body {
     line-height: 36px;
 }
 
+#section2 .section-description {
+    max-width: 925px;
+}
+
 .certification-box .section-title {
     padding: 1.087em 0;
 }
 
 .certification-box .section-description {
-    padding-bottom: 2.500em;
+    padding-bottom: 40px;
 }
 
 #section3 {
-    padding: 4.563em 0 5.813em;
+    padding: 4.000em 0 5.813em;
 }
 
 #section3 .section-title {
-    margin-bottom: 0.870em;
+    margin-bottom: 0.565em;
 }
 
 #section3 .section-description {
-	margin-bottom: 2.000em;
+	margin-bottom: 0.900em;
 }
 
 .levels-data-box {
-	margin-bottom: 3.125em;
+	margin-bottom: 2.500em;
 }
 
 .levels-tabs {
-	text-align: center;
 	margin-bottom: 3.125em;
+	margin-left: 9.500em;
 }
 
 .levels-tabs a {
@@ -400,10 +427,9 @@ body {
 
 .levels-desc {
     font-size: 1.250em;
-    line-height: 36px;
+    line-height: 32px;
     letter-spacing: 0.3px;
     color: #34404B;
-    margin-bottom: 0.500em;
 }
 
 .orange {
@@ -412,6 +438,10 @@ body {
 
 .levels-desc.orange {
 	margin-bottom: 1.500em;
+}
+
+.levels-desc.orange:last-child {
+    margin-bottom: 0.550em;
 }
 
 .resources-details-box {
@@ -425,7 +455,7 @@ body {
 
 .course-details-box {
     background: url(../images/bubble.png);
-    padding: 1.250em 0 1.250em 6.250em;
+    padding: 2.250em 0 2.250em 6.875em;
     background-size: cover;
 }
 
@@ -436,16 +466,34 @@ body {
     color: #34404B;
     letter-spacing: 0.3px;
     line-height: 36px;
-    margin-bottom: 1.136em;
+    margin-bottom: 0.364em;
 }
 
+.course-discounted-price span {
+    font-weight: bold;
+    padding-right: 0.909em;
+}
 
-.course-original-price {
-    text-decoration: line-through;
+.course-original-price span {
+    position: relative;
+}
+
+.course-original-price span:before {
+    content: "";
+    width: 100%;
+    height: 2px;
+    background: #000000;
+    position: absolute;
+    top: 50%;
+    transform: rotate(-5deg);
 }
 
 .course-offer-validity {
 	margin-bottom: 0;
+}
+
+#section3 .enroll_btn a {
+    margin-left: 15%;
 }
 
 .levels-tab-content .enroll_btn {
@@ -597,11 +645,11 @@ body {
 }
 
 #section5 {
-    padding: 6.563em 0;
+    padding: 5.313em 0;
 }
 
 #section5 .section-title {
-    margin-bottom: 0.652em;
+    margin-bottom: 0.391em;
 }
 
 #section5 .section-description {
@@ -816,21 +864,30 @@ body {
         max-width: 100%;
     }
 
+    .header-menu-right {
+        margin: 2em 0 0.500em;
+        text-align: left;
+    }
+
     .left-box {
         margin-bottom: 1.000em;
     }
 
     #section1 {
-        padding: 3.750em 0 7.188em;
+        padding: 2.500em 0 7.188em;
         background-position: 94.5% 100%;
     }
 
     .section1_title {
         padding: 0 0.909em;
+        font-size: 2.583em;
+        line-height: 43px;
     }
 
     .section1_description {
         padding: 0 1.667em;
+        margin-top: 1.778em;
+        max-width: 14.333em;
     }
 
     .enroll_btn a {
@@ -858,8 +915,8 @@ body {
     }
 
     .exam-dates-box, .registration-dates-box {
-        width: 95%;
-        margin: 0 auto;
+        width: 85%;
+        margin: 1.333em auto;
         display: block;
     }
 
@@ -873,9 +930,30 @@ body {
         padding: 0 2.000em;
     }
 
+    .certification-box .section-title {
+        padding: 1.471em 0 0.794em 0.882em;
+    }
+
+    #section2 .section-description {
+        max-width: 14.444em;
+    }
+
     .certification-box .section-description {
-        padding-bottom: 2.500em;
         padding: 0 2.000em;
+        padding-bottom: 2.500em;
+        font-size: 1.500em;
+        line-height: 31px;
+    }
+
+    #section3 {
+        padding: 2.583em 2.500em 5.813em;
+    }
+
+    #section3 .section-description {
+        font-size: 1.500em;
+        line-height: 32px;
+        padding: 0;
+        max-width: 14.944em;
     }
 
     .levels-tabs a {
@@ -886,8 +964,23 @@ body {
         margin: 0;
     }
 
+    #section3 .section-title {
+        margin-bottom: 0.353em;
+        padding: 0;
+    }
+
     .levels-tabs {
-        margin-left: 2.500em;
+        margin-left: 0;
+        margin-bottom: 2.333em;
+    }
+
+    .levels-tabs a:before {
+        bottom: -0.800em;
+    }
+
+    .levels-tabs a:hover:before, .levels-tabs .active-levels-tab:before {
+        width: 2.300em;
+        transition: 0.5s ease;
     }
 
     .levels-left-box,
@@ -895,21 +988,72 @@ body {
         display: block;
         max-width: 100%;
         width: auto;
-        padding: 0 2.500em;
+        padding: 0;
+    }
+
+    .levels-data-box-title {
+        margin-top: 2.500em;
+        font-size: 1.833em;
     }
 
     .resources-details-box {
         padding-left: 0;
     }
 
+    .levels-desc {
+        margin-top: 0.600em;
+        font-size: 1.667em;
+    }
+
+    .levels-desc.orange {
+        margin-top: 0.300em;
+    }
+
+    .course-original-price, .course-discounted-price, .course-offer-validity {
+        font-size: 1.833em;
+    }
+
+    .course-discounted-price{
+        margin-bottom: 0.727em;
+    }
+
+    .levels-data-box {
+        margin-bottom: 3.333em;
+    }
+
     .course-details-box {
-        padding: 6.667em 1.500em 2.500em;
+        padding: 5.417em 5.000em 2.500em 5.417em;
         background: url(../images/mob-bubble.png);
         background-size: cover;
     }
 
+    #section3 .enroll_btn a {
+        margin-left: 0;
+        padding: 1.000em 5.714em;
+    }
+
     .certified-user-box {
         max-width: 100%;
+    }
+
+    #section4 .section-description {
+    	text-align: left;
+    }
+
+    .testimonials-swiper-slide-left-box {
+        max-width: 35%;
+    }
+
+    .testimonials-swiper-slide-right-box {;
+        max-width: 65%;
+    }
+
+    #section5 .section-title {
+        margin: 0.176em 0 0.391em;
+    }
+
+    #section5 .section-description {
+    	display: none;
     }
 
     .levels-tab-content .enroll_btn {
@@ -946,6 +1090,28 @@ body {
         margin: 0 auto 3.125em;
     }
 
+    .certified-user-name {
+        font-size: 1.333em;
+    }
+
+    .certified-user-content-box {
+        max-width: 18.417em;
+        padding-left: 3.667em;
+    }
+
+    .certified-user-designation, .certified-user-company {
+        font-size: 1.167em;
+    }
+
+    .certified-user-certifications {
+        font-size: 1.333em;
+    }
+
+    .certification-colored-circles .certification-color-circle {
+        font-size: 1.333em;
+        margin-top: 1.000em;
+    }
+
     .footer-menu-box {
         background: #F2F2F2;
         padding: 3.438em 2.500em 4.063em;
@@ -955,8 +1121,20 @@ body {
         text-align: center;
     }
 
+    .follow-us {
+    	font-size: 1.333em;
+    }
+
     .ccdsa-menu-box {
         text-align: center;
+    }
+
+    .ccdsa-menu-right-box a:before {
+    	display: none;
+    }
+
+    .ccdsa-menu-left-box a, .cc-menu-left-box a {
+    	font-size: 1.167em;
     }
 
     .ccdsa-menu-left-box, .cc-menu-left-box {
@@ -968,12 +1146,14 @@ body {
 
     .ccdsa-menu-right-box, .cc-menu-right-box {
         margin-left: 0;
+        margin-bottom: 2.500em;
     }
 
     .ccdsa-menu-right-box a, .cc-menu-right-box a {
         margin-bottom: 1.5em;
         margin-right: 0;
         display: block;
+    	font-size: 1.167em;
     }
 
     .cc-footer-menu-left-box {
@@ -990,6 +1170,12 @@ body {
 
     .cc-footer-menu-right-box img {
         margin-left: 0;
+    }
+
+    .cc-footer-menu-right-box span {
+    	font-size: 1.333em;
+    	display: block;
+    	margin: 0.750em 0;
     }
 
 }
